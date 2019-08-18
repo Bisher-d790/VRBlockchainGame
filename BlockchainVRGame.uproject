@@ -15,5 +15,9 @@
 			"Name": "GoogleVRHMD",
 			"Enabled": true
 		}
+	],
+	"TargetPlatforms": [
+		"Android",
+		"IOS"
 	]
 }
