@@ -1,0 +1,14 @@
+{
+	"FileVersion": 3,
+	"EngineAssociation": "4.23",
+	"Category": "",
+	"Description": "",
+	"Enterprise": true,
+	"Modules": [
+		{
+			"Name": "MobileVRTest",
+			"Type": "Runtime",
+			"LoadingPhase": "Default"
+		}
+	]
+}

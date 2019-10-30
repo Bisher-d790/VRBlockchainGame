@@ -1,0 +1,22 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-MobileVRTest.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"E:\Unreal Engine Projects\BlockchainVR\MobileVRTest\Intermediate\Build\Win64\MobileVRTestEditor\Development\Engine\SharedPCH.Engine.h.obj"
+"E:\Unreal Engine Projects\BlockchainVR\MobileVRTest\Intermediate\Build\Win64\UE4Editor\Development\MobileVRTest\MobileVRTest.cpp.obj"
+"E:\Unreal Engine Projects\BlockchainVR\MobileVRTest\Intermediate\Build\Win64\UE4Editor\Development\MobileVRTest\MobileVRTestCharacter.cpp.obj"
+"E:\Unreal Engine Projects\BlockchainVR\MobileVRTest\Intermediate\Build\Win64\UE4Editor\Development\MobileVRTest\MobileVRTestGameMode.cpp.obj"
+"E:\Unreal Engine Projects\BlockchainVR\MobileVRTest\Intermediate\Build\Win64\UE4Editor\Development\MobileVRTest\MobileVRTestHUD.cpp.obj"
+"E:\Unreal Engine Projects\BlockchainVR\MobileVRTest\Intermediate\Build\Win64\UE4Editor\Development\MobileVRTest\MobileVRTestProjectile.cpp.obj"
+"E:\Unreal Engine Projects\BlockchainVR\MobileVRTest\Intermediate\Build\Win64\UE4Editor\Development\MobileVRTest\MobileVRTest.init.gen.cpp.obj"
+"E:\Unreal Engine Projects\BlockchainVR\MobileVRTest\Intermediate\Build\Win64\UE4Editor\Development\MobileVRTest\MobileVRTestCharacter.gen.cpp.obj"
+"E:\Unreal Engine Projects\BlockchainVR\MobileVRTest\Intermediate\Build\Win64\UE4Editor\Development\MobileVRTest\MobileVRTestGameMode.gen.cpp.obj"
+"E:\Unreal Engine Projects\BlockchainVR\MobileVRTest\Intermediate\Build\Win64\UE4Editor\Development\MobileVRTest\MobileVRTestHUD.gen.cpp.obj"
+"E:\Unreal Engine Projects\BlockchainVR\MobileVRTest\Intermediate\Build\Win64\UE4Editor\Development\MobileVRTest\MobileVRTestProjectile.gen.cpp.obj"
+"E:\Unreal Engine Projects\BlockchainVR\MobileVRTest\Intermediate\Build\Win64\UE4Editor\Development\MobileVRTest\Default.rc2.res"
+/OUT:"E:\Unreal Engine Projects\BlockchainVR\MobileVRTest\Intermediate\Build\Win64\UE4Editor\Development\MobileVRTest\UE4Editor-MobileVRTest.lib"
+/INCLUDE:IMPLEMENT_MODULE_MobileVRTest
