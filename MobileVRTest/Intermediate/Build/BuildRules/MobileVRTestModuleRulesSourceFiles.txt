@@ -1,3 +1,0 @@
-E:\Unreal Engine Projects\BlockchainVR\MobileVRTest\Source\MobileVRTest\MobileVRTest.Build.cs
-E:\Unreal Engine Projects\BlockchainVR\MobileVRTest\Source\MobileVRTest.Target.cs
-E:\Unreal Engine Projects\BlockchainVR\MobileVRTest\Source\MobileVRTestEditor.Target.cs

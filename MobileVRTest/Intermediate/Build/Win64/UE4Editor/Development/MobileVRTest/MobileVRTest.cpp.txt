@@ -1,2 +1,0 @@
-E:\Unreal Engine Projects\BlockchainVR\MobileVRTest\Intermediate\Build\Win64\UE4Editor\Development\MobileVRTest\Definitions.MobileVRTest.h
-E:\Unreal Engine Projects\BlockchainVR\MobileVRTest\Source\MobileVRTest\MobileVRTest.h
