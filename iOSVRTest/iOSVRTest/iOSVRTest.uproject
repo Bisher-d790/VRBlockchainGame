@@ -22,6 +22,10 @@
 				"Linux",
 				"Mac"
 			]
+		},
+		{
+			"Name": "GoogleVRHMD",
+			"Enabled": true
 		}
 	]
 }
