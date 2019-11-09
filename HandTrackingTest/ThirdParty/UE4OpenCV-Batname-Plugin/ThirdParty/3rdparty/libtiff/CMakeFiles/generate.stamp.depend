@@ -1,0 +1,11 @@
+# CMake generation dependency list for this directory.
+D:/SDKs/opencv/3rdparty/libtiff/CMakeLists.txt
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckCSourceCompiles.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckFunctionExists.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckTypeSize.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckIncludeFile.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/CheckIncludeFileCXX.cmake
+C:/Program Files/CMake/share/cmake-3.9/Modules/TestBigEndian.cmake
+D:/SDKs/opencv/3rdparty/libtiff/tif_config.h.cmake.in
+D:/SDKs/opencv/3rdparty/libtiff/tiffconf.h.cmake.in

@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dec\alpha_dec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dec\buffer_dec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dec\frame_dec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dec\idec_dec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dec\io_dec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dec\quant_dec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dec\tree_dec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dec\vp8_dec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dec\vp8l_dec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dec\webp_dec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\demux\anim_decode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\demux\demux.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\alpha_processing.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\alpha_processing_mips_dsp_r2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\alpha_processing_neon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\alpha_processing_sse2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\alpha_processing_sse41.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\argb.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\argb_mips_dsp_r2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\argb_sse2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\cost.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\cost_mips32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\cost_mips_dsp_r2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\cost_sse2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\cpu.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\dec.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\dec_clip_tables.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\dec_mips32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\dec_mips_dsp_r2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\dec_msa.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\dec_neon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\dec_sse2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\dec_sse41.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\enc_avx2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\enc_mips32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\enc_mips_dsp_r2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\enc_msa.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\enc_neon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\enc_sse2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\enc_sse41.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\filters.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\filters_mips_dsp_r2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\filters_msa.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\filters_neon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\filters_sse2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\lossless.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\lossless_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\lossless_enc_mips32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\lossless_enc_mips_dsp_r2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\lossless_enc_msa.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\lossless_enc_neon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\lossless_enc_sse2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\lossless_enc_sse41.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\lossless_mips_dsp_r2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\lossless_msa.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\lossless_neon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\lossless_sse2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\rescaler.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\rescaler_mips32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\rescaler_mips_dsp_r2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\rescaler_msa.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\rescaler_neon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\rescaler_sse2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\ssim.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\ssim_sse2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\upsampling.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\upsampling_mips_dsp_r2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\upsampling_msa.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\upsampling_neon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\upsampling_sse2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\yuv.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\yuv_mips32.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\yuv_mips_dsp_r2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\yuv_neon.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\yuv_sse2.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\alpha_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\analysis_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\backward_references_cost_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\backward_references_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\config_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\cost_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\delta_palettization_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\filter_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\frame_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\histogram_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\iterator_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\near_lossless_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\picture_csp_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\picture_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\picture_psnr_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\picture_rescale_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\picture_tools_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\predictor_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\quant_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\syntax_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\token_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\tree_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\vp8l_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\webp_enc.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\mux\anim_encode.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\mux\muxedit.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\mux\muxinternal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\mux\muxread.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\bit_reader_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\bit_writer_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\color_cache_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\filters_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\huffman_encode_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\huffman_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\quant_levels_dec_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\quant_levels_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\random_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\rescaler_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\thread_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\dec\alphai_dec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\dec\common_dec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\dec\vp8_dec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\dec\vp8i_dec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\dec\vp8li_dec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\dec\webpi_dec.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\common_sse2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\dsp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\lossless.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\lossless_common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\mips_macro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\msa_macro.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\neon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\dsp\yuv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\backward_references_enc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\cost_enc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\delta_palettization_enc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\histogram_enc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\vp8i_enc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\enc\vp8li_enc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\mux\animi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\mux\muxi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\bit_reader_inl_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\bit_reader_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\bit_writer_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\color_cache_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\endian_inl_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\filters_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\huffman_encode_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\huffman_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\quant_levels_dec_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\quant_levels_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\random_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\rescaler_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\thread_utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\utils\utils.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\webp\decode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\webp\demux.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\webp\encode.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\webp\format_constants.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\webp\mux.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\webp\mux_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\3rdparty\libwebp\src\webp\types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\SDKs\opencv\3rdparty\libwebp\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{71F92390-6A57-3E94-B6A2-989C540B10BD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{6189E123-AFE3-380D-B47B-196CB5A00531}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

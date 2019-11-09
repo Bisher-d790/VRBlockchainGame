@@ -1,0 +1,5 @@
+﻿  Building Custom Rule D:/SDKs/opencv/3rdparty/ittnotify/CMakeLists.txt
+  CMake does not need to re-run because D:/SDKs/opencv/Build/3rdparty/ittnotify/CMakeFiles/generate.stamp is up-to-date.
+  ittnotify_static.c
+  jitprofiling.c
+  ittnotify.vcxproj -> D:\SDKs\opencv\Build\3rdparty\lib\Release\ittnotify.lib

@@ -1,0 +1,20 @@
+﻿  Building Custom Rule D:/SDKs/opencv/3rdparty/libpng/CMakeLists.txt
+  CMake does not need to re-run because D:/SDKs/opencv/Build/3rdparty/libpng/CMakeFiles/generate.stamp is up-to-date.
+  png.c
+  pngerror.c
+  pngget.c
+  pngmem.c
+  pngpread.c
+  pngread.c
+  pngrio.c
+  pngrtran.c
+  pngrutil.c
+  pngset.c
+  pngtrans.c
+  pngwio.c
+  pngwrite.c
+  pngwtran.c
+  pngwutil.c
+  intel_init.c
+  filter_sse2_intrinsics.c
+  libpng.vcxproj -> D:\SDKs\opencv\Build\3rdparty\lib\Release\libpng.lib

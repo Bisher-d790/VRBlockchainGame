@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_core.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_color_convert_all.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_color_convert_rgbs.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_filter_bilateral.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_filter_box.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_filter_canny.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_filter_gaussian.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_filter_general.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_filter_laplacian.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_filter_morphology.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_filter_scharr.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_filter_sobel.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_op_copy.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_op_copy_channel.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_op_copy_make_border.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_op_copy_merge.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_op_copy_split.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_op_scale.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_op_set.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_op_set_channel.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_op_swap_channels.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_transform_mirror.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_transform_resize.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_transform_rotate.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_image_transform_warpaffine.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\src\iw_own.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\include\iw_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\include\iw_own.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\include\iw_owni.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\include\iw\iw.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\include\iw\iw_core.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\include\iw\iw_image.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\include\iw\iw_image_color.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\include\iw\iw_image_filter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\include\iw\iw_image_op.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\include\iw\iw_image_transform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\include\iw\iw_ll.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\include\iw\iw_version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\include\iw++\iw.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\include\iw++\iw_core.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\include\iw++\iw_image.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\include\iw++\iw_image_color.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\include\iw++\iw_image_filter.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\include\iw++\iw_image_op.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\include\iw++\iw_image_transform.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="D:\SDKs\opencv\Build\3rdparty\ippicv\ippiw_win\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{71F92390-6A57-3E94-B6A2-989C540B10BD}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{6189E123-AFE3-380D-B47B-196CB5A00531}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
