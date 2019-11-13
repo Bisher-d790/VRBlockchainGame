@@ -6,6 +6,10 @@ public class SkinIsolator : WebcamReader
     [Range(0, 100)]
     private float sensitivity = 50;
 
+    public bool isMasked = true;
+
+    public void SwitchIsMasked() { isMasked = !isMasked; }
+
     protected override void ProcessFrame(Color32[] frame)
     {
         for (int i = 0; i < frame.Length; i++)
@@ -20,7 +24,8 @@ public class SkinIsolator : WebcamReader
                 pixel.a
                 );
 
-            if (pixel.b - pixel.r > 100 - sensitivity) pixel = Color.black;
+            if (pixel.b - pixel.r > 100 - sensitivity) { pixel = Color.black; }
+            else if (isMasked) { pixel = Color.white; }
 
             frame[i] = pixel;
         }
