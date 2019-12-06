@@ -12,6 +12,10 @@
 // Sets default values
 AExplosiveBarrel::AExplosiveBarrel()
 {
+	ExplosionImpulse = 20000.f;
+	ExplosionFXScale = 5.f;
+	ExplosionDamage = 40.f;
+
 	MeshComp = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Mesh Component"));
 	MeshComp->SetSimulatePhysics(true);
 	MeshComp->SetCollisionObjectType(ECC_PhysicsBody);
@@ -28,11 +32,6 @@ AExplosiveBarrel::AExplosiveBarrel()
 	RadialForceComp->bAutoActivate = false;
 	RadialForceComp->SetupAttachment(MeshComp);
 
-	ExplosionImpulse = 20000.f;
-	ExplosionFXScale = 5.f;
-	ExplosionDamage = 40.f;
-	ExplosionImpulse = 1000.f;
-
 	SetReplicates(true);
 	SetReplicateMovement(true);
 }
@@ -43,15 +42,15 @@ void AExplosiveBarrel::BeginPlay()
 	Super::BeginPlay();
 }
 
-void AExplosiveBarrel::OnHealthChanged(UHealthComponent * HealthComponent, float Health, float HealthDelta, const UDamageType * DamageType, AController * InstigatedBy, AActor * DamageCauser)
+void AExplosiveBarrel::OnHealthChanged(UHealthComponent* HealthComponent, float Health, float HealthDelta, const UDamageType* DamageType, AController* InstigatedBy, AActor* DamageCauser)
 {
 	if (HasExploded)	return;
 
 	if (Health <= 0) {
 		RadialForceComp->FireImpulse();
-		
+
 		OnRep_Explosion(); // Explode FX and replicated function
-		
+
 		MeshComp->AddImpulse(MeshComp->GetUpVector() * ExplosionImpulse, TEXT("NONE"), false);
 		UGameplayStatics::ApplyRadialDamage(GetWorld(), ExplosionDamage, GetActorLocation(), RadialForceComp->Radius, ExplosionDamageType, TArray<AActor*>(), this);
 
@@ -61,9 +60,9 @@ void AExplosiveBarrel::OnHealthChanged(UHealthComponent * HealthComponent, float
 
 void AExplosiveBarrel::OnRep_Explosion()
 {
-		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ExplosionFX, GetActorLocation(),FRotator::ZeroRotator,FVector::OneVector*ExplosionFXScale);
-		UGameplayStatics::SpawnEmitterAttached(BurningFX,RootComponent);
-		MeshComp->SetMaterial(0, ExplodedMaterial);
+	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ExplosionFX, GetActorLocation(), FRotator::ZeroRotator, FVector::OneVector * ExplosionFXScale);
+	UGameplayStatics::SpawnEmitterAttached(BurningFX, RootComponent);
+	MeshComp->SetMaterial(0, ExplodedMaterial);
 }
 
 void AExplosiveBarrel::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {

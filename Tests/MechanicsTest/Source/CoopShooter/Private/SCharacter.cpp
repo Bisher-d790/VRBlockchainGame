@@ -20,10 +20,12 @@ ASCharacter::ASCharacter()
 
 	CameraSocketName = "CameraSocket";
 	WeaponSocketName = "WeaponSocket";
-	
+
+	TimeToDestroyAfterDeath = 10.f;
 	ZoomFOV = 65.f;
 	ZoomSpeed = 20.f;
-	TimeToDestroyAfterDeath = 10.f;
+
+	bIsDead = false;
 
 	SpringArmComp = CreateDefaultSubobject<USpringArmComponent>(TEXT("SpringArm Component"));
 	SpringArmComp->SetupAttachment(GetMesh(), CameraSocketName);
@@ -37,9 +39,8 @@ ASCharacter::ASCharacter()
 
 	GetMovementComponent()->SetJumpAllowed(true);
 	GetMovementComponent()->GetNavAgentPropertiesRef().bCanCrouch = true;
-	GetCapsuleComponent()->SetCollisionResponseToChannel(CollisionChannel_ShotTrace, ECR_Ignore);
 
-	bIsDead = false;
+	GetCapsuleComponent()->SetCollisionResponseToChannel(CollisionChannel_ShotTrace, ECR_Ignore);
 }
 
 // Called when the game starts or when spawned
@@ -71,7 +72,7 @@ FVector ASCharacter::GetPawnViewLocation() const
 	return Super::GetPawnViewLocation();
 }
 
-void ASCharacter::OnHealthChanged(UHealthComponent* LocalHealthComponent, float Health, float HealthDelta, const UDamageType* DamageType, AController* InstigatedBy, AActor* DamageCauser)
+void ASCharacter::OnHealthChanged(UHealthComponent * LocalHealthComponent, float Health, float HealthDelta, const UDamageType * DamageType, AController * InstigatedBy, AActor * DamageCauser)
 {
 	if (Health <= 0.0f && !bIsDead) {
 
@@ -187,7 +188,7 @@ void ASCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	PlayerInputComponent->BindAction("Reload", IE_Released, this, &ASCharacter::StopReload);
 }
 
-void ASCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
+void ASCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const{
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
 	DOREPLIFETIME(ASCharacter, CurrentWeapon);

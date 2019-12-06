@@ -8,15 +8,16 @@
 
 
 UENUM(BlueprintType)
-enum class ERoundState : uint8
+enum class EWaveState : uint8
 {
 	WaitingToStart,
 
-	RoundInProgress,
+	WaveInProgress,
 
+	// All bots spawned, but they are not dead yet
 	WaitingToComplete,
 
-	RoundCompleted,
+	WaveCompleted,
 
 	GameOver,
 };
@@ -31,14 +32,14 @@ class COOPSHOOTER_API ASGameState : public AGameStateBase
 
 protected:
 	UFUNCTION()
-	void OnRep_RoundState(ERoundState OldState);
+	void OnRep_WaveState(EWaveState OldState);
 
 	UFUNCTION(BlueprintImplementableEvent, Category = "GameState")
-		void OnRoundStateChanged(ERoundState OldState, ERoundState NewState);
+		void OnWaveStateChanged(EWaveState OldState, EWaveState NewState);
 
-	UPROPERTY(BlueprintReadOnly,ReplicatedUsing = OnRep_RoundState, Category = "GameState")
-	ERoundState RoundState;
+	UPROPERTY(BlueprintReadOnly,ReplicatedUsing = OnRep_WaveState, Category = "GameState")
+	EWaveState WaveState;
 
 public:
-	void SetRoundState(ERoundState NewState);
+	void SetWaveState(EWaveState NewState);
 };

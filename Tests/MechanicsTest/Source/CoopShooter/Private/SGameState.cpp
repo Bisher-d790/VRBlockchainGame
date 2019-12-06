@@ -5,24 +5,24 @@
 #include "Net/UnrealNetwork.h"
 
 
-void ASGameState::OnRep_RoundState(ERoundState OldState) {
-	OnRoundStateChanged(OldState, RoundState);
+void ASGameState::OnRep_WaveState(EWaveState OldState) {
+	OnWaveStateChanged(OldState, WaveState);
 }
 
 void ASGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
-	DOREPLIFETIME(ASGameState, RoundState);
+	DOREPLIFETIME(ASGameState, WaveState);
 }
 
-void ASGameState::SetRoundState(ERoundState NewState)
+void ASGameState::SetWaveState(EWaveState NewState)
 {
 	if (Role == ROLE_Authority) {
-		ERoundState OldState = RoundState;
+		EWaveState OldState = WaveState;
 
-		RoundState = NewState;
+		WaveState = NewState;
 
 		// Call event when on server
-		OnRep_RoundState(OldState);
+		OnRep_WaveState(OldState);
 	}
 }

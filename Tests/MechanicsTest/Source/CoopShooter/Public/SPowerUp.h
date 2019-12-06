@@ -21,7 +21,7 @@ protected:
 		int32 NOfTicks;
 
 	// Number of already processed ticks
-	int32 ProcessedTicks = 0;
+	int32 ProcessedTicks;
 
 	FTimerHandle TimerHandle_PowerUpTick;
 

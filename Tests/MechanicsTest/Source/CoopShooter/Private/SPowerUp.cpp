@@ -7,6 +7,7 @@
 // Sets default values
 ASPowerUp::ASPowerUp()
 {
+	ProcessedTicks = 0;
 	NOfTicks = 1;
 	TimerInterval = 0.0f;
 

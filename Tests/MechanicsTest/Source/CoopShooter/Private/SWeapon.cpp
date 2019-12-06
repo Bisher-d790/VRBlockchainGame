@@ -14,6 +14,16 @@
 // Sets default values
 ASWeapon::ASWeapon()
 {
+	ShotRange = 10000.f;
+	BaseDamage = 20.f;
+	VulnerableShotMultiplier = 4.f;
+	RoundCapacity = 60;
+	ReloadTime = 3.f;
+	NetUpdateFrequency = 66.0f;
+	MinNetUpdateFrequency = 33.0f;
+	RateOfFire = 600.f;
+	RoundEmpty = false;
+
 	MeshComp = CreateDefaultSubobject<USkeletalMeshComponent>(TEXT("Mesh Component"));
 	RootComponent = MeshComp;
 
@@ -21,15 +31,6 @@ ASWeapon::ASWeapon()
 	TrailFX_SocketName = "Target";
 
 	SetReplicates(true);
-
-	NetUpdateFrequency = 66.0f;
-	MinNetUpdateFrequency = 33.0f;
-	ShotRange = 10000.f;
-	BaseDamage = 20.f;
-	VulnerableShotMultiplier = 4.f;
-	RoundCapacity = 60;
-	ReloadTime = 3.f;
-	RateOfFire = 600.f;
 }
 
 // Called when the game starts or when spawned

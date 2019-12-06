@@ -48,7 +48,7 @@ protected:
 
 	UPROPERTY(EditAnywhere, Category = "Weapon")
 		float BaseDamage;
-
+	
 	UPROPERTY(EditAnywhere, Category = "Weapon")
 		float VulnerableShotMultiplier;
 
@@ -88,7 +88,7 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		float ReloadTime;
 
-	bool RoundEmpty = false;
+	bool RoundEmpty;
 
 	UPROPERTY(BlueprintReadOnly, Category = "Weapon")
 		int RoundBullets;

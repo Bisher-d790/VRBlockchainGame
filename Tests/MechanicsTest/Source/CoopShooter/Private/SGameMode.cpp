@@ -12,6 +12,12 @@
 
 ASGameMode::ASGameMode()
 {
+	// Set Basic values
+	TimeBetweenSpawns = 1.0f;
+	TimeBetweenWaves = 5.0f;
+	NOfBotsInWave = 2;
+	WaveCount = 0;
+
 	// Tick Basics
 	PrimaryActorTick.bCanEverTick = true;
 	PrimaryActorTick.TickInterval = 1.0f;
@@ -23,6 +29,8 @@ ASGameMode::ASGameMode()
 void ASGameMode::StartPlay()
 {
 	Super::StartPlay();
+
+	PrepareNextWave();
 }
 
 
@@ -30,7 +38,50 @@ void ASGameMode::Tick(float DeltaSeconds)
 {
 	Super::Tick(DeltaSeconds);
 
+	CheckWaveStatus();
 	CheckAnyPlayerAlive();
+}
+
+void ASGameMode::PrepareNextWave()
+{
+	GetWorldTimerManager().SetTimer(TimerHandle_BetweenWaves, this, &ASGameMode::StartWave, TimeBetweenWaves, false, 0.0f);
+
+	RestartDeadPlayers();
+
+	SetGameState(EWaveState::WaitingToStart);
+}
+
+void ASGameMode::CheckWaveStatus()
+{
+	// If wave not finished or already preparing next wave
+	bool bIsPreparingNextWave = GetWorldTimerManager().IsTimerActive(TimerHandle_BetweenWaves);
+
+	if (NOfBotsInWave > 0 || bIsPreparingNextWave) {
+		return;
+	}
+
+	bool bIsAnyBotsAlive = false;
+
+	for (FConstPawnIterator PawnIt = GetWorld()->GetPawnIterator(); PawnIt; ++PawnIt) {
+		APawn* PawnToCheck = PawnIt->Get();
+		if (!PawnToCheck || PawnToCheck->IsPlayerControlled()) {
+			continue;
+		}
+
+		UHealthComponent* HealthToCheck = Cast<UHealthComponent>(PawnToCheck->GetComponentByClass(UHealthComponent::StaticClass()));
+		if (HealthToCheck && HealthToCheck->GetHealth() > 0.0f) {
+			bIsAnyBotsAlive = true;
+
+			break;
+		}
+	}
+
+	if (!bIsAnyBotsAlive) {
+		SetGameState(EWaveState::WaveCompleted);
+
+		PrepareNextWave();
+	}
+
 }
 
 void ASGameMode::CheckAnyPlayerAlive()
@@ -54,22 +105,52 @@ void ASGameMode::CheckAnyPlayerAlive()
 	Gameover();
 }
 
+void ASGameMode::StartWave()
+{
+	WaveCount++;
+
+	NOfBotsInWave = 2 * WaveCount;
+
+	GetWorldTimerManager().SetTimer(TimerHandle_SpawningBots, this, &ASGameMode::SpawnBot_Handler, TimeBetweenSpawns, true, 0.0f);
+
+	SetGameState(EWaveState::WaveInProgress);
+}
+
+void ASGameMode::SpawnBot_Handler()
+{
+	SpawnBot();
+
+	// Check if all bots are spawned, End Wave
+	NOfBotsInWave--;
+	if (NOfBotsInWave <= 0) {
+		EndWave();
+	}
+}
+
+void ASGameMode::EndWave()
+{
+	GetWorldTimerManager().ClearTimer(TimerHandle_SpawningBots);
+
+	SetGameState(EWaveState::WaitingToComplete);
+}
 
 void ASGameMode::Gameover()
 {
+	EndWave();
+
 	// TODO: Finish Gameover logic
 
 
 	UE_LOG(LogTemp, Log, TEXT("Game Over!"));
 
-	SetGameState(ERoundState::GameOver);
+	SetGameState(EWaveState::GameOver);
 }
 
-void ASGameMode::SetGameState(ERoundState NewRoundState)
+void ASGameMode::SetGameState(EWaveState NewWaveState)
 {
 	ASGameState* GS = GetGameState<ASGameState>();
 	if (ensureAlways(GS)) {
-		GS->SetRoundState(NewRoundState);
+		GS->SetWaveState(NewWaveState);
 	}
 }
 
