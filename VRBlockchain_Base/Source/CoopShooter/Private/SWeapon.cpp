@@ -9,6 +9,7 @@
 #include "TimerManager.h"
 #include "CoopShooter.h"
 #include "Net/UnrealNetwork.h"
+#include "DrawDebugHelpers.h"
 
 
 // Sets default values
@@ -44,13 +45,13 @@ void ASWeapon::BeginPlay()
 
 void ASWeapon::Fire()
 {
-
 	if (Role < ROLE_Authority) {
 		Server_Fire();
 	}
 
 	// Trace the world from the eyes of the player to crosshair location
-	AActor* Owner = GetOwner();
+	APawn* Owner = Cast<APawn>(GetOwner());
+	APlayerController* PC = Cast<APlayerController>(Owner->GetController());
 
 	if (Owner && !RoundEmpty) {
 		FVector EyeLocation;
@@ -58,9 +59,7 @@ void ASWeapon::Fire()
 
 		Owner->GetActorEyesViewPoint(EyeLocation, EyeRotation);
 
-		FVector ShotDirection = EyeRotation.Vector();
-
-		FVector TraceEnd = EyeLocation + (ShotDirection * ShotRange);
+		FVector TrailFX_End = FVector();
 
 		FCollisionQueryParams QueryParams;
 		QueryParams.AddIgnoredActor(Owner);
@@ -69,11 +68,10 @@ void ASWeapon::Fire()
 		QueryParams.bReturnPhysicalMaterial = true;
 
 		EPhysicalSurface SurfaceType = SurfaceType_Default;
-		FVector TrailFX_End = TraceEnd;
+
 		FHitResult Hit;
 
-		if (GetWorld()->LineTraceSingleByChannel(Hit, EyeLocation, TraceEnd, CollisionChannel_ShotTrace, QueryParams)) {
-
+		if (PC->GetHitResultAtScreenPosition(CrosshairPosition, CollisionChannel_ShotTrace, QueryParams, Hit)) {
 			// Hit something logic
 			AActor* HitActor = Hit.GetActor();
 
@@ -83,11 +81,11 @@ void ASWeapon::Fire()
 
 			if (SurfaceType == SurfaceType_FleshVulnerable)	ShotDamage *= VulnerableShotMultiplier;
 
-			UGameplayStatics::ApplyPointDamage(Hit.GetActor(), ShotDamage, ShotDirection, Hit, Owner->GetInstigatorController(), this, DamageType);
+			UGameplayStatics::ApplyPointDamage(Hit.GetActor(), ShotDamage, EyeRotation.Vector(), Hit, Owner->GetInstigatorController(), this, DamageType);
 
 			TrailFX_End = Hit.ImpactPoint;
 
-			PlayImpactFX(SurfaceType, Hit.ImpactPoint);
+			PlayImpactFX(SurfaceType, TrailFX_End);
 		}
 
 		PlayFireFX(TrailFX_End);
@@ -98,6 +96,7 @@ void ASWeapon::Fire()
 		}
 
 		LastFiredTime = GetWorld()->GetTimeSeconds();
+
 		if ((--RoundBullets) == 0)	RoundEmpty = true;
 	}
 }

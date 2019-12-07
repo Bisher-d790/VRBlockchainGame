@@ -9,12 +9,14 @@
 class USkeletalMeshComponent;
 class UDamageType;
 class UParticleSystem;
+class UCameraShake;
+class UImage;
 
 // Contains info about the shot linetrace
-USTRUCT() struct FHitScanTrace 
+USTRUCT() struct FHitScanTrace
 {
 	GENERATED_BODY()
-	
+
 public:
 	UPROPERTY()
 		TEnumAsByte<EPhysicalSurface> SurfaceType;
@@ -40,7 +42,7 @@ protected:
 		USkeletalMeshComponent* MeshComp;
 
 	void PlayFireFX(FVector TrailFX_End);
-	
+
 	void PlayImpactFX(EPhysicalSurface SurfaceType, FVector Hit);
 
 	UPROPERTY(EditAnywhere, Category = "Weapon")
@@ -48,7 +50,7 @@ protected:
 
 	UPROPERTY(EditAnywhere, Category = "Weapon")
 		float BaseDamage;
-	
+
 	UPROPERTY(EditAnywhere, Category = "Weapon")
 		float VulnerableShotMultiplier;
 
@@ -88,6 +90,11 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		float ReloadTime;
 
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		void SetCrosshairPosition(FVector2D NewPosition) { CrosshairPosition = NewPosition; };
+
+	FVector2D CrosshairPosition;
+
 	bool RoundEmpty;
 
 	UPROPERTY(BlueprintReadOnly, Category = "Weapon")
@@ -110,7 +117,7 @@ protected:
 		FHitScanTrace HitScanTrace;
 
 	UFUNCTION()
-	void OnRep_HitScanTrace();
+		void OnRep_HitScanTrace();
 
 public:
 	void StartFire();

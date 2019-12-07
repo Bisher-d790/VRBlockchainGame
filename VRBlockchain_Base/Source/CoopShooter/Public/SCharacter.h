@@ -33,13 +33,16 @@ protected:
 
 	void EndCrouch();
 
-	UPROPERTY(Replicated)
-	ASWeapon* CurrentWeapon;
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		inline ASWeapon* GetCurrentWeapon() { return CurrentWeapon; };
 
-	UPROPERTY(EditDefaultsOnly, Category = "Player")
+	UPROPERTY(Replicated)
+		ASWeapon* CurrentWeapon;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		TSubclassOf<ASWeapon> StarterWeapon;
 
-	UPROPERTY(VisibleDefaultsOnly, Category = "Player")
+	UPROPERTY(VisibleDefaultsOnly, Category = "Weapon")
 		FName WeaponSocketName;
 
 	UPROPERTY(VisibleDefaultsOnly, Category = "Player")
@@ -58,10 +61,10 @@ protected:
 	// assigned from the camera component
 	float DefaultFOV;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Player")
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		float ZoomFOV;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Player", meta = (ClampMin = 0.1, ClampMax = 100))
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon", meta = (ClampMin = 0.1, ClampMax = 100))
 		float ZoomSpeed;
 
 	void BeginZoom();
@@ -97,7 +100,10 @@ public:
 
 	UPROPERTY(Replicated, BlueprintReadOnly, Category = "Player")
 		bool bIsDead;
-	
+
+	UFUNCTION(BlueprintCallable, Category = "Player")
+		inline bool GetIsDead() { return bIsDead; };
+
 	UFUNCTION(BlueprintImplementableEvent, Category = "Player")
 		void OnRestarted(APlayerController* PlayerController);
 
