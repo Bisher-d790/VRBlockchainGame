@@ -13,3 +13,4 @@ Saved
 *.xcodeproj
 *.xcworkspace
 iOSVRTest/iOSVRTest/Deployment/IOS/iOSVRTest.ipa
+*.umap

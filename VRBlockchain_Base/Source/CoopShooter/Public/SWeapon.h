@@ -45,6 +45,10 @@ protected:
 
 	void PlayImpactFX(EPhysicalSurface SurfaceType, FVector Hit);
 
+	void Server_Fire_Implementation(FVector ShotTarget);
+
+	bool Server_Fire_Validate(FVector ShotTarget);
+
 	UPROPERTY(EditAnywhere, Category = "Weapon")
 		float ShotRange;
 
@@ -82,18 +86,13 @@ protected:
 		virtual void Fire();
 
 	UFUNCTION(Server, Reliable, WithValidation)
-		void Server_Fire();
+		void Server_Fire(FVector ShotTarget);
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		int RoundCapacity;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		float ReloadTime;
-
-	UFUNCTION(BlueprintCallable, Category = "Weapon")
-		void SetCrosshairPosition(FVector2D NewPosition) { CrosshairPosition = NewPosition; };
-
-	FVector2D CrosshairPosition;
 
 	bool RoundEmpty;
 
@@ -130,4 +129,8 @@ public:
 
 	void StopReload();
 
+	FVector2D CrosshairPosition;
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		void SetCrosshairPosition(FVector2D NewPosition) { CrosshairPosition = NewPosition; };
 };

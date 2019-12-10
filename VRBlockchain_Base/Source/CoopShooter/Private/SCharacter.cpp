@@ -2,6 +2,7 @@
 
 #include "SCharacter.h"
 #include "Camera/CameraComponent.h"
+#include "Components/InputComponent.h"
 #include "GameFramework/SpringArmComponent.h"
 #include "GameFramework/PawnMovementComponent.h"
 #include "Components/CapsuleComponent.h"
@@ -72,7 +73,7 @@ FVector ASCharacter::GetPawnViewLocation() const
 	return Super::GetPawnViewLocation();
 }
 
-void ASCharacter::OnHealthChanged(UHealthComponent * LocalHealthComponent, float Health, float HealthDelta, const UDamageType * DamageType, AController * InstigatedBy, AActor * DamageCauser)
+void ASCharacter::OnHealthChanged(UHealthComponent* LocalHealthComponent, float Health, float HealthDelta, const UDamageType* DamageType, AController* InstigatedBy, AActor* DamageCauser)
 {
 	if (Health <= 0.0f && !bIsDead) {
 
@@ -188,7 +189,7 @@ void ASCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInputComponen
 	PlayerInputComponent->BindAction("Reload", IE_Released, this, &ASCharacter::StopReload);
 }
 
-void ASCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const{
+void ASCharacter::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const {
 	Super::GetLifetimeReplicatedProps(OutLifetimeProps);
 
 	DOREPLIFETIME(ASCharacter, CurrentWeapon);
