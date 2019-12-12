@@ -11,6 +11,7 @@ class URadialForceComponent;
 class UHealthComponent;
 class UMaterialInterface;
 class UParticleSystem;
+class USoundCue;
 
 UCLASS()
 class COOPSHOOTER_API AExplosiveBarrel : public AActor
@@ -58,6 +59,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly, Category = "ExplosionFX")
 		float ExplosionDamage;
 
+	UPROPERTY(EditDefaultsOnly, Category = "ExplosionFX")
+		USoundCue* ExplosionSound;
+	
 	TSubclassOf<UDamageType> ExplosionDamageType;
 
 	UFUNCTION()

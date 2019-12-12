@@ -57,10 +57,7 @@ void ASCharacter::BeginPlay()
 		SpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
 
 		CurrentWeapon = GetWorld()->SpawnActor<ASWeapon>(StarterWeapon, FVector::ZeroVector, FRotator::ZeroRotator, SpawnParams);
-		if (CurrentWeapon) {
-			CurrentWeapon->SetOwner(this);
-			CurrentWeapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponSocketName);
-		}
+		SetWeapon(CurrentWeapon);
 	}
 }
 
@@ -128,6 +125,15 @@ void ASCharacter::BeginCrouch()
 void ASCharacter::EndCrouch()
 {
 	UnCrouch();
+}
+
+void ASCharacter::SetWeapon(ASWeapon* WeaponInstance)
+{
+	if (WeaponInstance) {
+		CurrentWeapon = WeaponInstance;
+		WeaponInstance->SetOwner(this);
+		WeaponInstance->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponSocketName);
+	}
 }
 
 void ASCharacter::StartFire()

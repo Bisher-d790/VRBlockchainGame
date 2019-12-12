@@ -11,6 +11,7 @@ class UDamageType;
 class UParticleSystem;
 class UCameraShake;
 class UImage;
+class USoundCue;
 
 // Contains info about the shot linetrace
 USTRUCT() struct FHitScanTrace
@@ -72,6 +73,9 @@ protected:
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		UParticleSystem* TrailFX;
+
+	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
+		USoundCue* FireSound;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		TSubclassOf<UCameraShake> CameraShake;

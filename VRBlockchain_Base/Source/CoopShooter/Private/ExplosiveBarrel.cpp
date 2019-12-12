@@ -6,6 +6,7 @@
 #include "HealthComponent.h"
 #include "Materials/MaterialInterface.h"
 #include "Kismet/GameplayStatics.h"
+#include "Sound/SoundCue.h"
 #include "Net/UnrealNetwork.h"
 
 
@@ -62,6 +63,10 @@ void AExplosiveBarrel::OnRep_Explosion()
 {
 	UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), ExplosionFX, GetActorLocation(), FRotator::ZeroRotator, FVector::OneVector * ExplosionFXScale);
 	UGameplayStatics::SpawnEmitterAttached(BurningFX, RootComponent);
+	if (ExplosionSound) {
+		// Explosion Sound FX play
+		UGameplayStatics::PlaySoundAtLocation(this, ExplosionSound, GetActorLocation());
+	}
 	MeshComp->SetMaterial(0, ExplodedMaterial);
 }
 

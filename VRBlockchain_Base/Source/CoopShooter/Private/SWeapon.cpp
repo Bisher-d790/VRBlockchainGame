@@ -9,6 +9,7 @@
 #include "TimerManager.h"
 #include "CoopShooter.h"
 #include "Net/UnrealNetwork.h"
+#include "Sound/SoundCue.h"
 #include "DrawDebugHelpers.h"
 
 
@@ -231,6 +232,11 @@ void ASWeapon::PlayFireFX(FVector TrailFX_End)
 	if (TrailFX) {
 		UParticleSystemComponent* TrailComp = UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), TrailFX, MeshComp->GetSocketLocation(MuzzleSocketName));
 		TrailComp->SetVectorParameter(TrailFX_SocketName, TrailFX_End);
+	}
+
+	if (FireSound) {
+		// Explosion Sound FX play
+		UGameplayStatics::PlaySoundAtLocation(this, FireSound, GetActorLocation());
 	}
 
 	APawn* Owner = Cast<APawn>(GetOwner());

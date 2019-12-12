@@ -36,6 +36,9 @@ protected:
 	UFUNCTION(BlueprintCallable, Category = "Weapon")
 		inline ASWeapon* GetCurrentWeapon() { return CurrentWeapon; };
 
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		void  SetWeapon(ASWeapon* WeaponInstance);
+
 	UPROPERTY(Replicated)
 		ASWeapon* CurrentWeapon;
 
