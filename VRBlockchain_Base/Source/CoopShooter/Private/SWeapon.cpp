@@ -16,6 +16,10 @@
 // Sets default values
 ASWeapon::ASWeapon()
 {
+	Level = 0;
+	Name = "No Name";
+	ID = 0;
+
 	ShotRange = 10000.f;
 	BaseDamage = 20.f;
 	VulnerableShotMultiplier = 4.f;

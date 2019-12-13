@@ -54,13 +54,22 @@ protected:
 		float ShotRange;
 
 	UPROPERTY(EditAnywhere, Category = "Weapon")
-		float BaseDamage;
-
-	UPROPERTY(EditAnywhere, Category = "Weapon")
 		float VulnerableShotMultiplier;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Weapon")
 		TSubclassOf<UDamageType> DamageType;
+
+	UPROPERTY(EditAnywhere, Category = "Weapon")
+		float BaseDamage;
+
+	UPROPERTY(EditAnywhere, Category = "Weapon")
+		int Level;
+
+	UPROPERTY(EditAnywhere, Category = "Weapon")
+		FString Name;
+
+	UPROPERTY(EditAnywhere, Category = "Weapon")
+		int ID;
 
 	UPROPERTY(EditDefaultsOnly, Category = "Weapon")
 		UParticleSystem* MuzzleFlashFX;
@@ -137,4 +146,31 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Weapon")
 		void SetCrosshairPosition(FVector2D NewPosition) { CrosshairPosition = NewPosition; };
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		inline float GetRoundBullets() { return RoundBullets; };
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		inline float GetBaseDamage() { return BaseDamage; };
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		inline int GetLevel() { return Level; };
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		inline  FString GetName() { return Name; };
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		inline int GetID() { return ID; };
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		void SetBaseDamage(float Damage) { BaseDamage = Damage; };
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		void SetLevel(int NewLevel) { Level = NewLevel; };
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		void SetName(FString NewName) { Name = NewName; };
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		void SetID(int NewID) { ID = NewID; };
 };
