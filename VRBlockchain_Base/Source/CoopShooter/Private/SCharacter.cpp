@@ -130,6 +130,10 @@ void ASCharacter::EndCrouch()
 void ASCharacter::SetWeapon(ASWeapon* WeaponInstance)
 {
 	if (WeaponInstance) {
+		if (CurrentWeapon) {
+			CurrentWeapon->Destroy();
+		}
+
 		CurrentWeapon = WeaponInstance;
 		WeaponInstance->SetOwner(this);
 		WeaponInstance->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponSocketName);

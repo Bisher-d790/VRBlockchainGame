@@ -51,6 +51,72 @@ void ASWeapon::BeginPlay()
 
 void ASWeapon::Fire()
 {
+
+	if (Role < ROLE_Authority) {
+		Server_Fire(FVector());
+	}
+
+	// Trace the world from the eyes of the player to crosshair location
+	AActor* Owner = GetOwner();
+
+	if (Owner && !RoundEmpty) {
+		FVector EyeLocation;
+		FRotator EyeRotation;
+
+		Owner->GetActorEyesViewPoint(EyeLocation, EyeRotation);
+
+		FVector ShotDirection = EyeRotation.Vector();
+
+		FVector TraceEnd = EyeLocation + (ShotDirection * ShotRange);
+
+		FCollisionQueryParams QueryParams;
+		QueryParams.AddIgnoredActor(Owner);
+		QueryParams.AddIgnoredActor(this);
+		QueryParams.bTraceComplex = true;
+		QueryParams.bReturnPhysicalMaterial = true;
+
+		EPhysicalSurface SurfaceType = SurfaceType_Default;
+		FVector TrailFX_End = TraceEnd;
+		FHitResult Hit;
+
+		if (GetWorld()->LineTraceSingleByChannel(Hit, EyeLocation, TraceEnd, CollisionChannel_ShotTrace, QueryParams)) {
+
+			// Hit something logic
+			AActor* HitActor = Hit.GetActor();
+
+			SurfaceType = UPhysicalMaterial::DetermineSurfaceType(Hit.PhysMaterial.Get());
+
+			float ShotDamage = BaseDamage;
+
+			if (SurfaceType == SurfaceType_FleshVulnerable)	ShotDamage *= VulnerableShotMultiplier;
+
+			UGameplayStatics::ApplyPointDamage(Hit.GetActor(), ShotDamage, ShotDirection, Hit, Owner->GetInstigatorController(), this, DamageType);
+
+			TrailFX_End = Hit.ImpactPoint;
+
+			PlayImpactFX(SurfaceType, Hit.ImpactPoint);
+		}
+
+		PlayFireFX(TrailFX_End);
+
+		if (Role == ROLE_Authority) {
+			HitScanTrace.TraceTo = TrailFX_End;
+			HitScanTrace.SurfaceType = SurfaceType;
+		}
+
+		LastFiredTime = GetWorld()->GetTimeSeconds();
+		if ((--RoundBullets) == 0)	RoundEmpty = true;
+	}
+}
+
+void ASWeapon::Server_Fire_Implementation(FVector ShotTarget)
+{
+	Fire();
+}
+
+/*
+void ASWeapon::Fire()
+{
 	// Trace the world from the eyes of the player to crosshair location
 	APawn* Owner = Cast<APawn>(GetOwner());
 	APlayerController* PC = Cast<APlayerController>(Owner->GetController());
@@ -105,7 +171,7 @@ void ASWeapon::Fire()
 
 		if ((--RoundBullets) == 0)	RoundEmpty = true;
 	}
-}
+}*/
 
 void ASWeapon::PlayImpactFX(EPhysicalSurface SurfaceType, FVector ImpactPoint)
 {
@@ -132,7 +198,7 @@ void ASWeapon::PlayImpactFX(EPhysicalSurface SurfaceType, FVector ImpactPoint)
 		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), SelectedHitFX, ImpactPoint, ShotDirection.Rotation());
 	}
 }
-
+/*
 void ASWeapon::Server_Fire_Implementation(FVector ShotTarget)
 {
 	UE_LOG(LogTemp, Warning, TEXT("New crosshair in server: %d, %d, %d"), ShotTarget.X, ShotTarget.Y, ShotTarget.Z);
@@ -186,7 +252,7 @@ void ASWeapon::Server_Fire_Implementation(FVector ShotTarget)
 		LastFiredTime = GetWorld()->GetTimeSeconds();
 		if ((--RoundBullets) == 0)	RoundEmpty = true;
 	}
-}
+}*/
 
 bool ASWeapon::Server_Fire_Validate(FVector ShotTarget) {
 	return true;
@@ -227,6 +293,11 @@ void ASWeapon::Reload()
 void ASWeapon::StopReload()
 {
 	GetWorldTimerManager().ClearTimer(TimeHandle_ReloadTimer);
+}
+
+void ASWeapon::UpgradeWeapon()
+{
+	Level++;
 }
 
 void ASWeapon::PlayFireFX(FVector TrailFX_End)

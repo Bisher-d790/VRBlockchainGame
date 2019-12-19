@@ -173,4 +173,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Weapon")
 		void SetID(int NewID) { ID = NewID; };
+
+	UFUNCTION(BlueprintCallable, Category = "Weapon")
+		void UpgradeWeapon();
 };

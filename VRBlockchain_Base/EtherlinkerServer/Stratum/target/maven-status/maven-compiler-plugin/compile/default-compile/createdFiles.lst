@@ -385,6 +385,7 @@ com\academy\contracts\MethodParamsTester$6.class
 com\academy\contracts\ERC20Mintable$12.class
 com\academy\contracts\PremiumSubscriptionToken$2.class
 com\academy\contracts\ERC721Metadata$6.class
+com\academy\contracts\WeaponFactory$34.class
 com\academy\contracts\ERC20$3.class
 com\academy\contracts\WeaponFactory$11.class
 com\academy\contracts\PremiumItemToken$AddPremiumItemEventEventResponse.class
