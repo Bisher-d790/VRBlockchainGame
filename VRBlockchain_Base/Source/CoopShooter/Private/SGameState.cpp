@@ -5,7 +5,7 @@
 #include "Net/UnrealNetwork.h"
 
 
-void ASGameState::OnRep_WaveState(EWaveState OldState) {
+void ASGameState::OnRep_WaveState(EGameState OldState) {
 	OnWaveStateChanged(OldState, WaveState);
 }
 
@@ -15,10 +15,10 @@ void ASGameState::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifet
 	DOREPLIFETIME(ASGameState, WaveState);
 }
 
-void ASGameState::SetWaveState(EWaveState NewState)
+void ASGameState::SetWaveState(EGameState NewState)
 {
 	if (Role == ROLE_Authority) {
-		EWaveState OldState = WaveState;
+		EGameState OldState = WaveState;
 
 		WaveState = NewState;
 

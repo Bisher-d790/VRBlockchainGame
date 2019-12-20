@@ -7,7 +7,7 @@
 #include "SGameMode.generated.h"
 
 
-enum class EWaveState : uint8;
+enum class EGameState : uint8;
 
 // Delegate when an actor is killed
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOnActorKilled, AActor*, VictimActor, AActor*, KillerActor, AController*, KillerController); // Killed Actor, Killer Actor, InstigatorController
@@ -69,7 +69,7 @@ protected:
 	void Gameover();
 
 	// Sets the games state
-	void SetGameState(EWaveState NewWaveState);
+	void SetGameState(EGameState NewWaveState);
 
 	// Restarts dead players
 	void RestartDeadPlayers();

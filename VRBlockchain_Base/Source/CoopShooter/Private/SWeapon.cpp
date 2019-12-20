@@ -48,7 +48,7 @@ void ASWeapon::BeginPlay()
 	TimeBetweenShots = 60 / RateOfFire;
 	RoundBullets = RoundCapacity;
 }
-
+/*
 void ASWeapon::Fire()
 {
 
@@ -112,9 +112,9 @@ void ASWeapon::Fire()
 void ASWeapon::Server_Fire_Implementation(FVector ShotTarget)
 {
 	Fire();
-}
+}*/
 
-/*
+
 void ASWeapon::Fire()
 {
 	// Trace the world from the eyes of the player to crosshair location
@@ -171,7 +171,7 @@ void ASWeapon::Fire()
 
 		if ((--RoundBullets) == 0)	RoundEmpty = true;
 	}
-}*/
+}
 
 void ASWeapon::PlayImpactFX(EPhysicalSurface SurfaceType, FVector ImpactPoint)
 {
@@ -198,7 +198,7 @@ void ASWeapon::PlayImpactFX(EPhysicalSurface SurfaceType, FVector ImpactPoint)
 		UGameplayStatics::SpawnEmitterAtLocation(GetWorld(), SelectedHitFX, ImpactPoint, ShotDirection.Rotation());
 	}
 }
-/*
+
 void ASWeapon::Server_Fire_Implementation(FVector ShotTarget)
 {
 	UE_LOG(LogTemp, Warning, TEXT("New crosshair in server: %d, %d, %d"), ShotTarget.X, ShotTarget.Y, ShotTarget.Z);
@@ -252,7 +252,7 @@ void ASWeapon::Server_Fire_Implementation(FVector ShotTarget)
 		LastFiredTime = GetWorld()->GetTimeSeconds();
 		if ((--RoundBullets) == 0)	RoundEmpty = true;
 	}
-}*/
+}
 
 bool ASWeapon::Server_Fire_Validate(FVector ShotTarget) {
 	return true;
