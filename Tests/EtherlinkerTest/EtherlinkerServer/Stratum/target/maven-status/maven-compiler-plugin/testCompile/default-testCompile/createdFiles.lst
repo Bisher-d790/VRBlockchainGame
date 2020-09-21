@@ -1,7 +1,0 @@
-com\academy\stratum\authentication\WalletAuthenticationTests.class
-com\academy\stratum\crypto\api\CryptoAPITests.class
-com\academy\stratum\contracts\DonationsContractTests.class
-com\academy\stratum\contracts\EtherPetTokenTests.class
-com\academy\stratum\contracts\EtherlinkerCoreTests.class
-com\academy\stratum\contracts\EtherGaldTokenTests.class
-com\academy\stratum\contracts\MethodParamsTests.class
